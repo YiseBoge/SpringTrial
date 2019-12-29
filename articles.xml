@@ -1,26 +1,24 @@
 <ArticlesCollection>
     <articles>
-        <articles>
+        <article>
             <id>0</id>
-            <title>XML Trial again</title>
-            <body>Here is to trying out XML&#xd;
-                I just modified the existing xml trial
-            </body>
-        </articles>
-        <articles>
+            <title>this is a good day</title>
+            <body>asdgdafbdrghf</body>
+        </article>
+        <article>
             <id>1</id>
             <title>Hello</title>
             <body>This is awesomeness</body>
-        </articles>
-        <articles>
+        </article>
+        <article>
             <id>4</id>
             <title>this is a good day</title>
             <body>This is awesome</body>
-        </articles>
-        <articles>
+        </article>
+        <article>
             <id>5</id>
             <title>this is a good day</title>
             <body>This is awesome</body>
-        </articles>
+        </article>
     </articles>
 </ArticlesCollection>

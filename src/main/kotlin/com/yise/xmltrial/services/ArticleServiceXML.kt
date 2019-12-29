@@ -11,21 +11,21 @@ import java.io.File
 class ArticleServiceXML : ArticleService {
 
     private val articles = HashMap<Long, Article>()
-    private final val filePath = "/Users/yiseboge/IdeaProjects/SpringTrial/src/main/resources/articles.xml"
+    private final val filePath = "/Users/yiseboge/IdeaProjects/SpringTrial/articles.xml"
 
     private final fun populateArticles() {
         val xmlMapper = XmlMapper()
         val arts = xmlMapper.readValue(File(filePath),
                 ArticlesCollection::class.java)
 
-        for (art in arts.articles) {
+        for (art in arts.article) {
             articles[art.id] = art
         }
     }
 
     private final fun saveXML() {
         val xmlMapper = XmlMapper()
-        val arts = ArticlesCollection(articles = articles.values) // test data
+        val arts = ArticlesCollection(article = articles.values) // test data
         xmlMapper.writeValue(File(filePath), arts)
     }
 
