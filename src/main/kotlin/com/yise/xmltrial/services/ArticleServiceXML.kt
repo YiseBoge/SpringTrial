@@ -11,7 +11,7 @@ import java.io.File
 class ArticleServiceXML : ArticleService {
 
     private val articles = HashMap<Long, Article>()
-    private final val filePath = "/Users/yiseboge/IdeaProjects/SpringTrial/articles.xml"
+    private final val filePath = "/Users/yiseboge/IdeaProjects/SpringTrial/data/articles.xml"
 
     private final fun populateArticles() {
         val xmlMapper = XmlMapper()

@@ -2,8 +2,10 @@
     <articles>
         <article>
             <id>0</id>
-            <title>this is a good day</title>
-            <body>asdgdafbdrghf</body>
+            <title>Pub Title</title>
+            <body>Again is again and&#xd;
+                afangiange
+            </body>
         </article>
         <article>
             <id>1</id>
