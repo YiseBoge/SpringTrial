@@ -1,0 +1,45 @@
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="inc/fragments :: head"></head>
+
+<body>
+<nav th:replace="inc/fragments :: nav-bar"></nav>
+
+<div class="container content-holder">
+    <!-- <h1 class="my-4">Welcome <span th:text="${loggedInUser}"></span> </h1> -->
+    <div class="row">
+
+        <!-- Blog Entries Column -->
+        <div class="col-md-8">
+
+            <h1 class="mb-4">Article Posts
+                <a class="btn btn-primary d-inline-block float-md-right text-white shadow-sm"
+                   th:href="@{/article/create}">New Entry<i class="fas fa-plus text-white-50 fa-sm ml-2"></i></a>
+            </h1>
+
+            <div class="card mb-4 rounded-0 shadow-sm" th:each="article:${dataList}">
+                <!--                <div class="card-header">-->
+                <!--                    <img class="shadow-sm rounded-circle d-inline-block border border-light"-->
+                <!--                         th:src="@{'/uploads/profile_pictures/'+${blog.blogger.profilePic}}" width="38" height="38" alt="404">-->
+                <!--                    <span class="text-capitalize text-dark font-weight-bold text-capitalize m-2" th:text="${blog.blogger.name}">category</span>-->
+                <!--                </div>-->
+                <!--                <img alt="Card image cap" class="card-img-top rounded-0" th:if="${blog.image} != null" th:src="@{'/uploads/blog-images/'+${blog.image} }">-->
+                <div class="card-body">
+                    <h2 class="card-title" th:text="${article.title}">Post Title</h2>
+                    <p class="card-text" th:text="${article.body.split('\n')[0]}"></p>
+                    <a class="btn btn-outline-warning rounded-0 hover-shadow" th:href="@{'/article/' + ${article.id}}">
+                        Read More&rarr;</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- /.row -->
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<ArticlesCollection>
+    <articles>
+        <articles>
+            <id>0</id>
+            <title>XML Trial again</title>
+            <body>Here is to trying out XML&#xd;
+                I just modified the existing xml trial
+            </body>
+        </articles>
+        <articles>
+            <id>1</id>
+            <title>Hello</title>
+            <body>This is awesomeness</body>
+        </articles>
+        <articles>
+            <id>4</id>
+            <title>this is a good day</title>
+            <body>This is awesome</body>
+        </articles>
+        <articles>
+            <id>5</id>
+            <title>this is a good day</title>
+            <body>This is awesome</body>
+        </articles>
+    </articles>
+</ArticlesCollection>

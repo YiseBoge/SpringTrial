@@ -1,0 +1,42 @@
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="inc/fragments :: head"></head>
+
+<body>
+<nav th:replace="inc/fragments :: nav-bar"></nav>
+<div class="container content-holder">
+    <!-- <h1 class="my-4">Welcome <span th:text="${loggedInUser}"></span> </h1> -->
+    <div class="row">
+
+        <!-- Blog Entries Column -->
+        <div class="col-md-8">
+            <!--            <form action="#" th:action="@{${currentArticle.id}}" th:method="DELETE" class="m-0 p-0">-->
+            <!--                <input type="hidden" name="_method" value="DELETE">-->
+            <!--                <button type="submit" class="btn btn-danger d-inline-block float-md-right text-white shadow-sm mx-2">-->
+            <!--                    Delete<i class="fas fa-trash text-white-50 fa-sm ml-2"></i></button>-->
+            <!--            </form>-->
+            <a class="btn btn-danger d-inline-block float-md-right text-white shadow-sm mx-2"
+               th:href="@{${currentArticle.id} + '/delete'}">
+                Delete<i class="fas fa-trash text-white-50 fa-sm ml-2"></i></a>
+            <a class="btn btn-warning d-inline-block float-md-right text-white shadow-sm mx-2"
+               th:href="@{${currentArticle.id} + '/edit'}">
+                Edit<i class="fas fa-pen text-white-50 fa-sm ml-2"></i></a>
+
+            <h1 class="mb-4" th:text="${currentArticle.title}"></h1>
+
+            <p th:text="${currentArticle.body}"></p>
+
+            <hr>
+            <a class="btn btn-secondary d-inline-block text-white shadow-sm"
+               th:href="@{/article}">Back</a>
+
+        </div>
+
+    </div>
+    <!-- /.row -->
+
+</div>
+</body>
+</html>

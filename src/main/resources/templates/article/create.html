@@ -1,0 +1,60 @@
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="inc/fragments :: head"></head>
+
+<body>
+<nav th:replace="inc/fragments :: nav-bar"></nav>
+
+<div class="container content-holder">
+    <!-- <h1 class="my-4">Welcome <span th:text="${loggedInUser}"></span> </h1> -->
+    <!-- Article Entries Column -->
+    <div class="card shadow-sm col-md-8 px-0">
+
+        <div class="card-body">
+            <h4 class="mb-4">Add New</h4>
+            <form method="POST" th:action="@{/article}" th:object="${newArticle}">
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <label class="form-check-label col-md-2" for="title">Title: </label>
+                        <div class="col-md-12">
+                            <input class="form-control col-md-12" id="title" name="title" placeholder="Title"
+                                   th:field="*{title}"
+                                   type="text">
+                            <span class="text-danger"
+                                  th:errors="*{title}"
+                                  th:if="${#fields.hasErrors('title')}">Title Error</span>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group col-md-12">
+                        <label class="form-check-label col-md-2" for="body">Body: </label>
+                        <div class="col-md-12">
+                        <textarea class="form-control col-md-12" id="body" name="body" placeholder="Body"
+                                  rows="8"
+                                  th:field="*{body}" type="text">
+                        </textarea>
+                            <span class="text-danger"
+                                  th:errors="*{body}"
+                                  th:if="${#fields.hasErrors('body')}">Body Error</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="col-md-10">
+                        <button class="btn btn-primary text-white rounded-0 mx-3" type="submit">
+                            Save<i class="fas fa-check text-white-50 fa-sm ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
